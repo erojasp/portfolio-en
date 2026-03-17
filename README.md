@@ -1,4 +1,4 @@
-# Mechatronics Engineer - Instruemntation and Control
+# Mechatronics Engineer - Instrumentation and Control Engineering
 
 #### Technical Skills: Python, MATLAB, PLC Programming (Siemens, Rockwell, Schneider)
 
