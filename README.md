@@ -56,6 +56,6 @@ Used **Matlab** to train over 100 machine learning models which estimated partic
 - Weeks of Welcome Poster Competition - UTD, Fall 2019
 - A Brief Introduction to Networks - GSP Seminar, Spring 2019
 
-- [Website Portfolio](https://www.youtube.com/channel/UCa9gErQ9AE5jT2DZLjXBIdA)
+- [Spanish](https://www.youtube.com/channel/UCa9gErQ9AE5jT2DZLjXBIdA)
 
-- [LinkedIn]([https://medium.com/@shawhin](https://www.linkedin.com/in/eduardo-rojas-povis/))
+- [LinkedIn](https://www.linkedin.com/in/eduardo-rojas-povis/)
