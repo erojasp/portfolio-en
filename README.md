@@ -24,6 +24,13 @@
 • Conducted troubleshooting of rotating equipment controls (Hitachi compressors, Baker Hughes turbomachinery, Mitsui reciprocating compressors).
 • Participated in the development of the Alarm Management Philosophy for Talara Refinery.
 
+## Specialization Courses and Tools
+- Specialization in Excel BI |  (_National University of Engineering_)
+- Specialization in AutoCAD, AutoCAD Electrical, and Plant3D |  (_National University of Engineering_)
+- Professional Specialization in SolidWorks |  (_National University of Engineering_)
+
+- Specialization in Cisco Networking (CCNA v7) |  (_CIBERTEC_)
+
 
 ## Projects
 ### Data-Driven EEG Band Discovery with Decision Trees
