@@ -8,21 +8,22 @@
 
 ## Work Experience
 **Jr. Automation Engineer @ LEVEX AVEVA Industrial Software Specialist (_Feb. 2026 - Present_)**
-• Initial implementation and support of the AVEVA PI System for industrial data management.
-• Integration of data from DCS and PLC systems into process historians (AVEVA PI System) for monitoring and analysis of critical process variables in industrial environments.
-• Development of reports and visualization of process variables within the AVEVA ecosystem.
-• Technical documentation of data architecture and industrial integration processes for monitoring process variables.
+
+- Initial implementation and support of the AVEVA PI System for industrial data management.
+- Integration of data from DCS and PLC systems into process historians (AVEVA PI System) for monitoring and analysis of critical process variables in industrial environments.
+- Development of reports and visualization of process variables within the AVEVA ecosystem.
+- Technical documentation of data architecture and industrial integration processes for monitoring process variables.
 
 
 **Control & APC Engineering Intern @ Petroperu S.A (_Apr. 2025 - Dec. 2025_)**
-• Supported operation and maintenance of the Honeywell EPKS DCS, SIS and F&G systems.
-• Assisted in reviewing PLC logic (Allen-Bradley, Siemens, Schneider, Honeywell) and improving controller performance through tuning and alarm analysis.
-• Contributed to the reduction of nuisance alarms using ISA-18.2 methodologies.
-• Performed loop checks, signal verification, instrument calibration and functional testing of transmitters, valves, and safety devices.
-• Produced and red-lined P&IDs, loop diagrams and as-built documentation for I&C deliverables.
-• Configured VLANs, IP addressing, and industrial switches to support equipment connectivity.
-• Conducted troubleshooting of rotating equipment controls (Hitachi compressors, Baker Hughes turbomachinery, Mitsui reciprocating compressors).
-• Participated in the development of the Alarm Management Philosophy for Talara Refinery.
+- Supported operation and maintenance of the Honeywell EPKS DCS, SIS and F&G systems.
+- Assisted in reviewing PLC logic (Allen-Bradley, Siemens, Schneider, Honeywell) and improving controller performance through tuning and alarm analysis.
+- Contributed to the reduction of nuisance alarms using ISA-18.2 methodologies.
+- Performed loop checks, signal verification, instrument calibration and functional testing of transmitters, valves, and safety devices.
+- Produced and red-lined P&IDs, loop diagrams and as-built documentation for I&C deliverables.
+- Configured VLANs, IP addressing, and industrial switches to support equipment connectivity.
+- Conducted troubleshooting of rotating equipment controls (Hitachi compressors, Baker Hughes turbomachinery, Mitsui reciprocating compressors).
+- Participated in the development of the Alarm Management Philosophy for Talara Refinery.
 
 ## Specialization Courses and Tools
 - Specialization in Excel BI |  (_National University of Engineering_)
