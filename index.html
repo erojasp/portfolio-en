@@ -3,65 +3,289 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eduardo Rojas | CV</title>
-
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Eduardo Rojas - Instrumentation & Control Engineer | Process Control, PLC/DCS and Industrial Automation" />
+  <meta name="theme-color" content="#1D4ED8" />
+  <title>Eduardo Rojas | Instrumentation & Control Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles_fixed.css" />
 </head>
-
 <body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#top" class="brand">Eduardo <span>Rojas</span></a>
 
-<header class="topbar">
-  <div class="container topbar-inner">
+      <nav class="nav" id="nav">
+        <a href="#profile" data-i18n="nav_profile">Profile</a>
+        <a href="#experience" data-i18n="nav_experience">Experience</a>
+        <a href="#education" data-i18n="nav_education">Education</a>
+        <a href="#competencies" data-i18n="nav_competencies">Competencies</a>
+        <a href="#skills" data-i18n="nav_skills">Skills</a>
+        <a href="#projects" data-i18n="nav_projects">Projects</a>
+        <a href="#languages" data-i18n="nav_languages">Languages</a>
+      </nav>
 
-    <a class="brand">Eduardo <span>Rojas</span></a>
+      <div class="toolbar-controls">
+        <div class="theme-switch" aria-label="Theme switcher">
+          <button class="theme-btn" id="themeToggle" type="button" aria-label="Toggle theme">
+            <span id="themeLabel">Dark</span>
+          </button>
+        </div>
 
-    <nav class="nav">
-      <a href="#projects">Projects</a>
-    </nav>
+        <div class="lang-switch" aria-label="Language switcher">
+          <button class="lang-btn active" data-lang="en" type="button">EN</button>
+          <button class="lang-btn" data-lang="es" type="button">ES</button>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <!-- BOTÓN LIMPIO SIN ICONO -->
-    <button class="theme-btn" id="themeToggle">
-      <span id="themeLabel">Light</span>
-    </button>
+  <div class="container">
+    <section class="hero" id="top">
+      <div class="hero-grid">
+        <aside class="card sidebar" id="profile">
+          <div class="intro-tag" data-i18n="sidebar_tag">Industrial Field Professional</div>
 
+          <div>
+            <h1 class="name">Eduardo Antonio Rojas Povis</h1>
+            <p class="role" data-i18n="role">Instrumentation &amp; Control Engineer</p>
+          </div>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <strong data-i18n="contact_location">Location</strong>
+              <span>Lima, Peru</span>
+            </div>
+            <div class="contact-item">
+              <strong>Email</strong>
+              <a href="mailto:rojaspoviseduardo@gmail.com">rojaspoviseduardo@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <strong data-i18n="contact_phone">Phone</strong>
+              <a href="tel:+51975502818">(+51) 975 502 818</a>
+            </div>
+            <div class="contact-item">
+              <strong>LinkedIn</strong>
+              <a href="https://www.linkedin.com/in/eduardo-rojas-povis/" target="_blank" rel="noreferrer">linkedin.com/in/eduardo-rojas-povis</a>
+            </div>
+          </div>
+
+          <div class="side-list">
+            <div class="side-item">
+              <strong data-i18n="focus_title">Professional Focus</strong>
+              <span data-i18n="focus_text">Process control, instrumentation, PLC/DCS systems, interlocks, startups, shutdowns and industrial troubleshooting.</span>
+            </div>
+            <div class="side-item">
+              <strong data-i18n="availability_title">Availability</strong>
+              <span data-i18n="availability_text">Plant operations and rotational schedules.</span>
+            </div>
+            <div class="side-item">
+              <strong data-i18n="additional_title">Additional</strong>
+              <span data-i18n="additional_text">English C1 · Driver’s License A1</span>
+            </div>
+          </div>
+        </aside>
+
+        <section class="card hero-main">
+          <div class="eyebrow" data-i18n="hero_eyebrow">Corporate Premium CV · Instrumentation &amp; Process Control</div>
+          <h2 class="headline" data-i18n="hero_headline">Professional profile for <span>industrial instrumentation</span> and process control environments.</h2>
+          <p class="summary" data-i18n="hero_summary">
+            Mechatronics Engineer from UNI specialized in Industrial Instrumentation &amp; Control at TECSUP, with hands-on experience in process plants supporting field instrumentation, PLC/DCS systems, control loop verification, interlocks validation and operational support during startups and shutdowns. Strong orientation toward industrial automation, process monitoring, data integration and reliable plant operation in high-criticality environments.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#experience" data-i18n="btn_experience">View Experience</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/eduardo-rojas-povis/" target="_blank" rel="noreferrer" data-i18n="btn_linkedin">Open LinkedIn</a>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <main>
+      <div class="main-grid">
+        <div class="stack">
+          <section class="card section" id="experience">
+            <div class="section-title">
+              <h2 data-i18n="experience_title">Professional Experience</h2>
+              <small data-i18n="experience_subtitle">Plant, automation and control systems</small>
+            </div>
+
+            <div class="timeline">
+              <article class="timeline-item">
+                <div class="item-head">
+                  <h3 data-i18n="exp1_role">Junior Automation Engineer – PI System / Industrial Data Integration</h3>
+                  <span class="period">Feb 2026 – Present</span>
+                </div>
+                <div class="item-sub" data-i18n="exp1_company">LEVEX – AVEVA Industrial Software Specialists · Lima, Peru</div>
+                <ul class="clean-list">
+                  <li data-i18n="exp1_b1">Supported deployment and configuration of AVEVA PI System for industrial data acquisition and monitoring environments.</li>
+                  <li data-i18n="exp1_b2">Integrated real-time data from DCS and PLC systems for visualization, trending and performance monitoring of critical process variables.</li>
+                  <li data-i18n="exp1_b3">Developed dashboards and reporting tools to improve operational visibility and technical decision-making.</li>
+                  <li data-i18n="exp1_b4">Analyzed process data to identify deviations and support operational improvement initiatives.</li>
+                </ul>
+              </article>
+
+              <article class="timeline-item">
+                <div class="item-head">
+                  <h3 data-i18n="exp2_role">Control &amp; Advanced Applications Engineering Assistant</h3>
+                  <span class="period">Apr 2025 – Dec 2025</span>
+                </div>
+                <div class="item-sub" data-i18n="exp2_company">Petroperú S.A. – Talara Refinery · Piura, Peru</div>
+                <ul class="clean-list">
+                  <li data-i18n="exp2_b1">Performed troubleshooting and diagnostics on instrumentation, PLC and DCS systems including Honeywell Experion PKS, SIS and FGS.</li>
+                  <li data-i18n="exp2_b2">Executed loop checks, calibration and functional testing of field instrumentation and control loops.</li>
+                  <li data-i18n="exp2_b3">Participated in plant startups and shutdowns, verifying interlocks, alarms and safe operating conditions.</li>
+                  <li data-i18n="exp2_b4">Analyzed control logic, P&amp;IDs and I/O signals to support troubleshooting and validation of control systems.</li>
+                  <li data-i18n="exp2_b5">Supported PID loop review and alarm management initiatives aligned with ISA 18.2.</li>
+                  <li data-i18n="exp2_b6">Supported industrial communications such as Modbus and EtherNet/IP, plus basic control network configuration.</li>
+                </ul>
+              </article>
+
+              <article class="timeline-item">
+                <div class="item-head">
+                  <h3 data-i18n="exp3_role">R&amp;D Intern – Automation &amp; Control Systems</h3>
+                  <span class="period">Mar 2024 – Dec 2024</span>
+                </div>
+                <div class="item-sub" data-i18n="exp3_company">National University of Engineering – Research Department · Lima, Peru</div>
+                <ul class="clean-list">
+                  <li data-i18n="exp3_b1">Developed control and monitoring solutions for automated systems in research and development environments.</li>
+                  <li data-i18n="exp3_b2">Applied data analysis and modeling techniques for process and signal behavior.</li>
+                  <li data-i18n="exp3_b3">Programmed in Python for control applications and basic predictive modeling tasks.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="card section" id="projects">
+            <div class="section-title">
+              <h2 data-i18n="projects_title">Relevant Projects</h2>
+              <small data-i18n="projects_subtitle">Industrial applications</small>
+            </div>
+
+            <div class="project-grid">
+              <article class="project">
+                <h3 data-i18n="proj1_title">DCS/SCADA System for Rotating Equipment Monitoring &amp; Reliability</h3>
+                <p data-i18n="proj1_text">Supported implementation of a monitoring architecture using Modbus-based industrial communications, together with process visualization focused on anomaly detection and performance analysis of compressors, turbines and pumps.</p>
+              </article>
+
+              <article class="project">
+                <h3 data-i18n="proj2_title">Mineral Processing Pilot Plant Automation</h3>
+                <p data-i18n="proj2_text">Configured DCS systems and industrial networks for process monitoring, while interpreting P&amp;IDs and control architecture for operational supervision and technical validation.</p>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <div class="stack">
+          <section class="card section" id="education">
+            <div class="section-title">
+              <h2 data-i18n="education_title">Education</h2>
+              <small data-i18n="education_subtitle">Academic background</small>
+            </div>
+            <div class="mini-grid">
+              <div class="mini-card">
+                <strong data-i18n="edu1_title">B.Sc. in Mechatronics Engineering</strong>
+                <div data-i18n="edu1_text1">National University of Engineering (UNI), Peru · 2020 – 2024</div>
+                <div data-i18n="edu1_text2">GPA: 3.5 / 4.0 · Ranked 7th in class (2024-2)</div>
+              </div>
+              <div class="mini-card">
+                <strong data-i18n="edu2_title">Specialization in Industrial Instrumentation &amp; Control</strong>
+                <div data-i18n="edu2_text">TECSUP Institute, Peru · 2023 – 2024</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="card section" id="competencies">
+            <div class="section-title">
+              <h2 data-i18n="competencies_title">Core Competencies</h2>
+              <small data-i18n="competencies_subtitle">Field and control orientation</small>
+            </div>
+            <div class="chip-grid">
+              <span class="chip" data-i18n="comp1">Field Instrumentation</span>
+              <span class="chip" data-i18n="comp2">Loop Checks</span>
+              <span class="chip" data-i18n="comp3">Calibration</span>
+              <span class="chip" data-i18n="comp4">Control Loops</span>
+              <span class="chip" data-i18n="comp5">PLC Troubleshooting</span>
+              <span class="chip" data-i18n="comp6">DCS Troubleshooting</span>
+              <span class="chip" data-i18n="comp7">Interlocks</span>
+              <span class="chip" data-i18n="comp8">Alarm Management</span>
+              <span class="chip" data-i18n="comp9">Trend Analysis</span>
+              <span class="chip" data-i18n="comp10">Anomaly Detection</span>
+              <span class="chip" data-i18n="comp11">P&amp;ID Interpretation</span>
+              <span class="chip" data-i18n="comp12">Startups / Shutdowns</span>
+              <span class="chip" data-i18n="comp13">Preventive Maintenance</span>
+              <span class="chip" data-i18n="comp14">Corrective Maintenance</span>
+            </div>
+          </section>
+
+          <section class="card section" id="skills">
+            <div class="section-title">
+              <h2 data-i18n="skills_title">Technical Skills</h2>
+              <small data-i18n="skills_subtitle">Platforms and tools</small>
+            </div>
+            <div class="mini-grid">
+              <div class="mini-card">
+                <strong data-i18n="skill1_title">Enterprise Systems</strong>
+                <p data-i18n="skill1_text">SAP (PM/MM), MS Project, Primavera P6</p>
+              </div>
+              <div class="mini-card">
+                <strong data-i18n="skill2_title">Data &amp; Analytics</strong>
+                <p data-i18n="skill2_text">PI System, Power BI, Excel (VBA), Python</p>
+              </div>
+              <div class="mini-card">
+                <strong data-i18n="skill3_title">Control Systems</strong>
+                <p data-i18n="skill3_text">Honeywell Experion PKS, ABB 800xA, AVEVA System Platform, Siemens TIA Portal, Allen-Bradley Studio 5000, Schneider ControlExpert, Tristation 1131</p>
+              </div>
+              <div class="mini-card">
+                <strong data-i18n="skill4_title">Instrumentation</strong>
+                <p data-i18n="skill4_text">Pressure, level, flow and temperature transmitters, control valves, loop checks and calibration</p>
+              </div>
+              <div class="mini-card">
+                <strong data-i18n="skill5_title">Industrial Networks</strong>
+                <p data-i18n="skill5_text">Modbus TCP/IP, EtherNet/IP</p>
+              </div>
+              <div class="mini-card">
+                <strong data-i18n="skill6_title">Engineering Tools</strong>
+                <p data-i18n="skill6_text">AutoCAD, AutoCAD Plant 3D, SolidWorks, Inventor, Navisworks</p>
+              </div>
+              <div class="mini-card">
+                <strong data-i18n="skill7_title">Certifications</strong>
+                <p data-i18n="skill7_text">Schneider Electric Specialist, Cisco CCNA v7, Health &amp; Safety Supervisor, Industrial Electrical Installations Specialization</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="card section" id="languages">
+            <div class="section-title">
+              <h2 data-i18n="languages_title">Languages & Additional Information</h2>
+              <small data-i18n="languages_subtitle">Complementary profile</small>
+            </div>
+            <div class="mini-grid">
+              <div class="mini-card">
+                <strong data-i18n="lang_title">Languages</strong>
+                <p data-i18n="lang1">English: Advanced (C1 – TOEFL ITP)</p>
+                <p data-i18n="lang2">French: Basic (A2)</p>
+                <p data-i18n="lang3">Portuguese: Basic (A1)</p>
+              </div>
+              <div class="mini-card">
+                <strong data-i18n="addinfo_title">Additional Information</strong>
+                <p data-i18n="addinfo1">Peruvian Driver’s License (A1)</p>
+                <p data-i18n="addinfo2">Experience in high-criticality industrial environments</p>
+                <p data-i18n="addinfo3">Availability for plant operations and rotational schedules</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p><span data-i18n="footer_text">Corporate Premium CV</span> · © <span id="year"></span> Eduardo Rojas</p>
+    </footer>
   </div>
-</header>
 
-<div class="container">
+  <button class="top-btn" id="topBtn" aria-label="Back to top">↑</button>
 
-  <section class="card section" id="projects">
-
-    <div class="section-title">
-      <h2>Relevant Projects</h2>
-      <small>Industrial applications</small>
-    </div>
-
-    <div class="project-grid">
-
-      <div class="project">
-        <h3>DCS/SCADA System for Rotating Equipment Monitoring & Reliability</h3>
-        <p>
-          Supported implementation of a monitoring architecture using Modbus-based industrial
-          communications, together with process visualization focused on anomaly detection and
-          performance analysis of compressors, turbines and pumps.
-        </p>
-      </div>
-
-      <div class="project">
-        <h3>Mineral Processing Pilot Plant Automation</h3>
-        <p>
-          Configured DCS systems and industrial networks for process monitoring, while interpreting
-          P&IDs and control architecture for operational supervision and technical validation.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-</div>
-
-<script src="script.js"></script>
-
+  <script src="script_fixed.js"></script>
 </body>
 </html>
