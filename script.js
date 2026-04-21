@@ -111,7 +111,9 @@ const translations = {
     add1: 'Peruvian Driver’s License (A1)',
     add2: 'Experience in high-criticality industrial environments',
     add3: 'Availability for site support and rotational schedules',
-    topButton: 'Top'
+    topButton: 'Top',
+    themeDark: 'Dark mode',
+    themeLight: 'Light mode'
   },
   es: {
     pageTitle: 'Eduardo Rojas | Ingeniero de Instrumentación y Control',
@@ -225,7 +227,9 @@ const translations = {
     add1: 'Licencia de conducir peruana (A1)',
     add2: 'Experiencia en entornos industriales de alta criticidad',
     add3: 'Disponibilidad para soporte en sitio y esquemas rotativos',
-    topButton: 'Inicio'
+    topButton: 'Inicio',
+    themeDark: 'Modo oscuro',
+    themeLight: 'Modo claro'
   }
 };
 
@@ -236,6 +240,8 @@ const yearEl = document.getElementById('year');
 const navLinks = document.querySelectorAll('[data-nav]');
 const sections = document.querySelectorAll('section[id], aside[id]');
 const langButtons = document.querySelectorAll('[data-lang-btn]');
+const themeButton = document.getElementById('themeBtn');
+const themeColorMeta = document.querySelector('meta[name="theme-color"]');
 
 function applyTranslations(lang) {
   const dict = translations[lang] || translations.en;
@@ -253,6 +259,12 @@ function applyTranslations(lang) {
 
   topButton.textContent = dict.topButton;
 
+  const currentTheme = document.documentElement.dataset.theme || 'light';
+  if (themeButton) {
+    themeButton.textContent = currentTheme === 'dark' ? dict.themeLight : dict.themeDark;
+    themeButton.setAttribute('aria-label', currentTheme === 'dark' ? dict.themeLight : dict.themeDark);
+  }
+
   langButtons.forEach((button) => {
     const isActive = button.dataset.langBtn === lang;
     button.classList.toggle('is-active', isActive);
@@ -263,6 +275,28 @@ function applyTranslations(lang) {
 function setLanguage(lang) {
   localStorage.setItem('site-language', lang);
   applyTranslations(lang);
+}
+
+
+function applyTheme(theme) {
+  const resolvedTheme = theme === 'dark' ? 'dark' : 'light';
+  document.documentElement.dataset.theme = resolvedTheme;
+
+  if (themeColorMeta) {
+    themeColorMeta.setAttribute('content', resolvedTheme === 'dark' ? '#0b1220' : '#0f172a');
+  }
+
+  const currentLang = localStorage.getItem('site-language') || 'en';
+  const dict = translations[currentLang] || translations.en;
+  if (themeButton) {
+    themeButton.textContent = resolvedTheme === 'dark' ? dict.themeLight : dict.themeDark;
+    themeButton.setAttribute('aria-label', resolvedTheme === 'dark' ? dict.themeLight : dict.themeDark);
+  }
+}
+
+function setTheme(theme) {
+  localStorage.setItem('site-theme', theme);
+  applyTheme(theme);
 }
 
 function setActiveNav() {
@@ -287,12 +321,22 @@ langButtons.forEach((button) => {
   button.addEventListener('click', () => setLanguage(button.dataset.langBtn));
 });
 
+if (themeButton) {
+  themeButton.addEventListener('click', () => {
+    const currentTheme = document.documentElement.dataset.theme || 'light';
+    setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+  });
+}
+
 topButton.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 window.addEventListener('scroll', setActiveNav, { passive: true });
 window.addEventListener('load', setActiveNav);
+
+const savedTheme = localStorage.getItem('site-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+applyTheme(savedTheme);
 
 const savedLanguage = localStorage.getItem('site-language') || 'en';
 applyTranslations(savedLanguage);
