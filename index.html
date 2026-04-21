@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Eduardo Rojas - Instrumentation & Control Engineer | Process Control, PLC/DCS and Plant Automation" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Eduardo Rojas | Instrumentation & Control Engineer</title>
+  <style>
+    :root {
+      --bg: #0b1120;
+      --bg-soft: #111827;
+      --card: rgba(15, 23, 42, 0.72);
+      --card-border: rgba(148, 163, 184, 0.18);
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-2: #22c55e;
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+      --radius: 22px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 26%),
+        radial-gradient(circle at top right, rgba(34, 197, 94, 0.12), transparent 22%),
+        linear-gradient(180deg, #020617 0%, #0b1120 45%, #111827 100%);
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+      background: rgba(2, 6, 23, 0.72);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.95rem;
+      padding: 8px 12px;
+      border-radius: 999px;
+      transition: 0.25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--text);
+      background: rgba(56, 189, 248, 0.12);
+    }
+
+    .hero {
+      padding: 56px 0 28px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .profile-card,
+    .main-card,
+    .section-card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+    }
+
+    .profile-card {
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-card::before,
+    .main-card::before,
+    .section-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(56,189,248,0.5), rgba(255,255,255,0));
+      pointer-events: none;
+    }
+
+    .profile-photo {
+      width: 160px;
+      height: 160px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid rgba(56, 189, 248, 0.35);
+      box-shadow: 0 0 0 8px rgba(56, 189, 248, 0.06);
+      background: #0f172a;
+    }
+
+    .profile-name {
+      text-align: center;
+      font-size: 1.7rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .profile-role {
+      text-align: center;
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 18px;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .badge {
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      background: rgba(148, 163, 184, 0.12);
+      color: #dbeafe;
+      border: 1px solid rgba(148, 163, 184, 0.12);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .contact-item {
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(148, 163, 184, 0.08);
+      color: var(--muted);
+      font-size: 0.95rem;
+      word-break: break-word;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: var(--text);
+      font-size: 0.86rem;
+      margin-bottom: 3px;
+      letter-spacing: 0.2px;
+    }
+
+    .main-card {
+      position: relative;
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      font-size: 0.92rem;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    .headline {
+      font-size: clamp(2rem, 3vw, 3.3rem);
+      line-height: 1.06;
+      font-weight: 900;
+      margin-bottom: 16px;
+      max-width: 12ch;
+    }
+
+    .headline span {
+      color: var(--accent);
+    }
+
+    .summary {
+      color: #cbd5e1;
+      font-size: 1.02rem;
+      max-width: 70ch;
+      margin-bottom: 22px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 14px;
+      font-weight: 700;
+      transition: transform 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.96;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+      color: #082f49;
+    }
+
+    .btn-secondary {
+      border-color: rgba(148, 163, 184, 0.18);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text);
+    }
+
+    main {
+      padding: 10px 0 64px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 24px;
+    }
+
+    .stack {
+      display: grid;
+      gap: 24px;
+    }
+
+    .section-card {
+      position: relative;
+      padding: 28px;
+      overflow: hidden;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .section-title h2 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    .section-title small {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 22px;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: 7px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(56, 189, 248, 0.08);
+    }
+
+    .timeline-item::after {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 24px;
+      width: 2px;
+      height: calc(100% + 8px);
+      background: rgba(148, 163, 184, 0.18);
+    }
+
+    .timeline-item:last-child::after {
+      display: none;
+    }
+
+    .item-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px 14px;
+      margin-bottom: 7px;
+    }
+
+    .item-header h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+    }
+
+    .item-header .period {
+      color: var(--accent);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .item-subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    .list {
+      display: grid;
+      gap: 8px;
+      color: #dbe4f0;
+      padding-left: 18px;
+    }
+
+    .list li {
+      margin-left: 2px;
+    }
+
+    .chip-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      padding: 9px 12px;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.14);
+      border-radius: 999px;
+      color: #d9f4ff;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .project-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .project {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(148, 163, 184, 0.1);
+    }
+
+    .project h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .project p {
+      color: #d3dbe7;
+      margin-bottom: 12px;
+      font-size: 0.96rem;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .project-links a {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    .mini-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .mini-item {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(148, 163, 184, 0.08);
+    }
+
+    .mini-item strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .footer {
+      padding: 18px 0 34px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.92rem;
+    }
+
+    .top-btn {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid rgba(148, 163, 184, 0.16);
+      background: rgba(15, 23, 42, 0.82);
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(8px);
+      pointer-events: none;
+      transition: 0.25s ease;
+      box-shadow: var(--shadow);
+    }
+
+    .top-btn.show {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .main-card {
+        padding: 28px;
+      }
+
+      .headline {
+        max-width: unset;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        width: 100%;
+        padding-bottom: 2px;
+      }
+
+      .hero {
+        padding-top: 28px;
+      }
+
+      .profile-card,
+      .main-card,
+      .section-card {
+        border-radius: 18px;
+      }
+
+      .profile-card,
+      .main-card,
+      .section-card {
+        padding: 22px;
+      }
+
+      .profile-photo {
+        width: 128px;
+        height: 128px;
+      }
+
+      .headline {
+        font-size: 2rem;
+      }
+
+      .summary {
+        font-size: 0.97rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="brand">Eduardo <span>Rojas</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">Profile</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#languages">Languages</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="hero" id="top">
+      <div class="hero-grid">
+        <aside class="profile-card" id="contact">
+          <h1 class="profile-name">Eduardo Antonio Rojas Povis</h1>
+          <p class="profile-role">Instrumentation &amp; Control Engineer</p>
+
+          <div class="badge-row">
+            <span class="badge">Process Control</span>
+            <span class="badge">PLC / DCS</span>
+            <span class="badge">PI System</span>
+            <span class="badge">Plant Automation</span>
+          </div>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <strong>Location</strong>
+              Lima, Peru
+            </div>
+            <div class="contact-item">
+              <strong>Email</strong>
+              <a href="mailto:rojaspoviseduardo@gmail.com">rojaspoviseduardo@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <strong>Phone</strong>
+              <a href="tel:+51975502818">(+51) 975 502 818</a>
+            </div>
+            <div class="contact-item">
+              <strong>LinkedIn</strong>
+              <a href="https://www.linkedin.com/in/eduardo-rojas-povis/" target="_blank" rel="noreferrer">linkedin.com/in/eduardo-rojas-povis</a>
+            </div>
+            <div class="contact-item">
+              <strong>Availability</strong>
+              Plant operations and rotational schedules
+            </div>
+          </div>
+        </aside>
+
+        <section class="main-card" id="about">
+          <div class="eyebrow">Online CV · GitHub Pages Ready · Responsive Layout</div>
+          <h2 class="headline">Industrial <span>control, automation</span> and data systems for critical operations.</h2>
+          <p class="summary">
+            Mechatronics Engineer from UNI with specialization in Industrial Instrumentation &amp; Control from TECSUP. Hands-on experience in process plants supporting instrumentation, PLC/DCS systems, control loops, interlocks verification, plant startups and shutdowns in high-criticality environments. Strong orientation toward process control, industrial automation and industrial data monitoring using PI System, analytics tools and operational visualization.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#experience">View experience</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/eduardo-rojas-povis/" target="_blank" rel="noreferrer">View LinkedIn</a>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <main>
+      <div class="content-grid">
+        <div class="stack">
+          <section class="section-card" id="experience">
+            <div class="section-title">
+              <h2>Professional Experience</h2>
+              <small>Industrial automation and control</small>
+            </div>
+
+            <div class="timeline">
+              <article class="timeline-item">
+                <div class="item-header">
+                  <h3>Junior Automation Engineer – PI System / Industrial Data Integration</h3>
+                  <span class="period">Feb 2026 – Present</span>
+                </div>
+                <p class="item-subtitle">LEVEX – AVEVA Industrial Software Specialists · Lima, Peru</p>
+                <ul class="list">
+                  <li>Supported deployment and configuration of AVEVA PI System for industrial data acquisition and monitoring environments.</li>
+                  <li>Integrated real-time data from DCS and PLC systems for visualization, trending and performance monitoring of critical process variables.</li>
+                  <li>Developed dashboards and reporting tools to improve operational visibility and decision-making.</li>
+                  <li>Analyzed process data to identify deviations and support operational improvement initiatives.</li>
+                </ul>
+              </article>
+
+              <article class="timeline-item">
+                <div class="item-header">
+                  <h3>Control &amp; Advanced Applications Engineering Assistant</h3>
+                  <span class="period">Apr 2025 – Dec 2025</span>
+                </div>
+                <p class="item-subtitle">Petroperú S.A. – Talara Refinery (Oil &amp; Gas) · Piura, Peru</p>
+                <ul class="list">
+                  <li>Performed troubleshooting and diagnostics on instrumentation, PLC and DCS systems including Honeywell Experion PKS, SIS and FGS.</li>
+                  <li>Executed loop checks, calibration and functional testing of field instrumentation and control loops.</li>
+                  <li>Participated in plant startups and shutdowns, verifying interlocks, alarms and safe operating conditions.</li>
+                  <li>Analyzed control logic, P&amp;IDs and I/O signals to support troubleshooting and control system validation.</li>
+                  <li>Supported PID loop review and alarm management initiatives aligned with ISA 18.2.</li>
+                  <li>Supported industrial communications such as Modbus and EtherNet/IP, plus basic control network configuration.</li>
+                </ul>
+              </article>
+
+              <article class="timeline-item">
+                <div class="item-header">
+                  <h3>R&amp;D Intern – Automation &amp; Control Systems</h3>
+                  <span class="period">Mar 2024 – Dec 2024</span>
+                </div>
+                <p class="item-subtitle">National University of Engineering (UNI) – Research Department · Lima, Peru</p>
+                <ul class="list">
+                  <li>Developed control and monitoring solutions for automated systems in R&amp;D environments.</li>
+                  <li>Applied data analysis and modeling techniques for process and signal behavior.</li>
+                  <li>Programmed in Python for control applications and basic predictive modeling.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="section-card" id="projects">
+            <div class="section-title">
+              <h2>Relevant Projects</h2>
+              <small>Industrial focus</small>
+            </div>
+
+            <div class="project-grid">
+              <article class="project">
+                <h3>DCS/SCADA System for Rotating Equipment Monitoring &amp; Reliability</h3>
+                <p>
+                  Supported implementation of a monitoring architecture using Modbus-based industrial communications, with visualization for anomaly detection and performance analysis of compressors, turbines and pumps.
+                </p>
+              </article>
+
+              <article class="project">
+                <h3>Mineral Processing Pilot Plant Automation</h3>
+                <p>
+                  Configured DCS systems and industrial networks for process monitoring while interpreting P&amp;IDs and control architecture for operational supervision.
+                </p>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <div class="stack">
+          <section class="section-card" id="education">
+            <div class="section-title">
+              <h2>Education</h2>
+              <small>Academic background</small>
+            </div>
+            <div class="mini-list">
+              <div class="mini-item">
+                <strong>B.Sc. in Mechatronics Engineering</strong>
+                National University of Engineering (UNI), Peru · 2020 – 2024<br>
+                GPA: 3.5 / 4.0 · Ranked 7th in class (2024-2)
+              </div>
+              <div class="mini-item">
+                <strong>Specialization in Industrial Instrumentation &amp; Control</strong>
+                TECSUP Institute, Peru · 2023 – 2024
+              </div>
+            </div>
+          </section>
+
+          <section class="section-card" id="skills">
+            <div class="section-title">
+              <h2>Core Competencies</h2>
+              <small>Technical profile</small>
+            </div>
+            <div class="chip-grid">
+              <span class="chip">Field Instrumentation</span>
+              <span class="chip">Loop Checks</span>
+              <span class="chip">Calibration</span>
+              <span class="chip">Control Loops</span>
+              <span class="chip">PLC Troubleshooting</span>
+              <span class="chip">DCS Troubleshooting</span>
+              <span class="chip">Interlocks</span>
+              <span class="chip">Alarm Management</span>
+              <span class="chip">PI System</span>
+              <span class="chip">Trend Analysis</span>
+              <span class="chip">Anomaly Detection</span>
+              <span class="chip">OPC UA Integration</span>
+              <span class="chip">P&amp;ID Interpretation</span>
+              <span class="chip">Startups / Shutdowns</span>
+              <span class="chip">Preventive Maintenance</span>
+              <span class="chip">Corrective Maintenance</span>
+            </div>
+          </section>
+
+          <section class="section-card" id="courses">
+            <div class="section-title">
+              <h2>Technical Skills & Certifications</h2>
+              <small>Platforms and tools</small>
+            </div>
+            <div class="mini-list">
+              <div class="mini-item">
+                <strong>Enterprise Systems</strong>
+                SAP (PM/MM), MS Project, Primavera P6
+              </div>
+              <div class="mini-item">
+                <strong>Data &amp; Analytics</strong>
+                PI System, Power BI, Excel (VBA), Python
+              </div>
+              <div class="mini-item">
+                <strong>Control Systems</strong>
+                Honeywell Experion PKS, ABB 800xA, AVEVA System Platform, Siemens TIA Portal, Allen-Bradley Studio 5000, Schneider ControlExpert, Tristation 1131
+              </div>
+              <div class="mini-item">
+                <strong>Instrumentation</strong>
+                Pressure, level, flow and temperature transmitters, control valves, loop checks and calibration
+              </div>
+              <div class="mini-item">
+                <strong>Industrial Networks</strong>
+                Modbus TCP/IP, EtherNet/IP
+              </div>
+              <div class="mini-item">
+                <strong>Engineering Tools</strong>
+                AutoCAD, AutoCAD Plant 3D, SolidWorks, Inventor, Navisworks
+              </div>
+              <div class="mini-item">
+                <strong>Additional Certifications</strong>
+                Schneider Electric Specialist, Cisco CCNA v7, Health &amp; Safety Supervisor, Industrial Electrical Installations Specialization
+              </div>
+            </div>
+          </section>
+
+          <section class="section-card" id="languages">
+            <div class="section-title">
+              <h2>Languages & Additional Information</h2>
+              <small>Professional profile</small>
+            </div>
+            <div class="mini-list">
+              <div class="mini-item">
+                <strong>Languages</strong>
+                English: Advanced (C1 – TOEFL ITP)<br>
+                French: Basic (A2)<br>
+                Portuguese: Basic (A1)
+              </div>
+              <div class="mini-item">
+                <strong>Additional Information</strong>
+                Peruvian Driver’s License (A1)<br>
+                Experience in high-criticality industrial environments (Oil &amp; Gas – Talara Refinery)<br>
+                Availability for plant operations and rotational schedules
+              </div>
+              <div class="mini-item">
+                <strong>LinkedIn</strong>
+                <a href="https://www.linkedin.com/in/eduardo-rojas-povis/" target="_blank" rel="noreferrer">linkedin.com/in/eduardo-rojas-povis</a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Eduardo Rojas · Online CV for GitHub Pages</p>
+    </footer>
+  </div>
+
+  <button class="top-btn" id="topBtn" aria-label="Back to top">↑</button>
+
+  <script>
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const topBtn = document.getElementById('topBtn');
+    const year = document.getElementById('year');
+
+    year.textContent = new Date().getFullYear();
+
+    const activateLink = () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (window.scrollY >= sectionTop) current = section.getAttribute('id');
+      });
+
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+      });
+    };
+
+    window.addEventListener('scroll', () => {
+      activateLink();
+      topBtn.classList.toggle('show', window.scrollY > 420);
+    });
+
+    topBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    activateLink();
+  </script>
+</body>
+</html>
