@@ -1,17 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Instrumentation and Control Engineer focused on field instrumentation, loop checks, calibration, PLC/DCS troubleshooting and industrial plant support." />
-  <meta name="theme-color" content="#0f172a" />
-  <meta name="color-scheme" content="light dark" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Eduardo Rojas | Instrumentation & Control Engineer" />
-  <meta property="og:description" content="Field-oriented instrumentation and control engineer with experience in process plants, control systems and industrial operations support." />
-  <meta property="og:locale" content="en_US" />
-  <meta name="twitter:card" content="summary" />
-  <title>Eduardo Rojas | Instrumentation &amp; Control Engineer</title>
+  <meta name="theme-color" content="#0b1220" />
+  <title>Eduardo Rojas | Instrumentation & Control Engineer</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -19,28 +13,23 @@
 
   <header class="topbar">
     <div class="container topbar-inner">
-      <a href="#top" class="brand" aria-label="Homepage">
-        Eduardo <span>Rojas</span>
-      </a>
+      <a href="#top" class="brand">Eduardo <span>Rojas</span></a>
 
       <div class="topbar-actions">
-        <nav class="nav" id="nav" aria-label="Primary navigation">
+        <nav class="nav" aria-label="Primary navigation">
           <a href="#profile" data-nav="profile" data-i18n="navProfile">Profile</a>
           <a href="#experience" data-nav="experience" data-i18n="navExperience">Experience</a>
+          <a href="#highlights" data-nav="highlights" data-i18n="navHighlights">Highlights</a>
           <a href="#education" data-nav="education" data-i18n="navEducation">Education</a>
-          <a href="#competencies" data-nav="competencies" data-i18n="navCompetencies">Competencies</a>
           <a href="#skills" data-nav="skills" data-i18n="navSkills">Skills</a>
           <a href="#projects" data-nav="projects" data-i18n="navProjects">Projects</a>
           <a href="#languages" data-nav="languages" data-i18n="navLanguages">Languages</a>
         </nav>
 
         <div class="topbar-controls">
-          <div class="theme-switch" aria-label="Theme selector">
-            <button type="button" class="theme-btn" id="themeBtn" data-i18n="themeDark">Dark mode</button>
-          </div>
-
+          <button type="button" class="theme-btn" id="themeBtn" data-i18n="themeLight">Light mode</button>
           <div class="lang-switch" aria-label="Language selector">
-            <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-btn is-active" data-lang-btn="en" aria-pressed="true">EN</button>
             <button type="button" class="lang-btn" data-lang-btn="es" aria-pressed="false">ES</button>
           </div>
         </div>
@@ -50,7 +39,7 @@
 
   <main class="page" id="main-content">
     <div class="container">
-      <section class="hero-grid" id="top" aria-label="Introduction">
+      <section class="hero-layout" id="top">
         <aside class="card sidebar" id="profile">
           <div class="tag" data-i18n="sidebarTag">Field Instrumentation and Control</div>
 
@@ -59,7 +48,7 @@
             <p class="role" data-i18n="heroRole">Instrumentation &amp; Control Engineer</p>
           </div>
 
-          <address class="contact-list" aria-label="Contact information">
+          <address class="contact-list">
             <div class="contact-item">
               <strong data-i18n="labelLocation">Location</strong>
               <span data-i18n="contactLocation">Lima, Peru</span>
@@ -94,28 +83,95 @@
           </div>
         </aside>
 
-        <section class="card hero-main" aria-label="Professional summary">
-          <p class="eyebrow" data-i18n="heroEyebrow">Instrumentation, control systems and industrial operations support</p>
-          <h2 class="headline" data-i18n="heroHeadline">Field-oriented profile for instrumentation, control and industrial plant environments.</h2>
-          <p class="summary" data-i18n="heroSummary">
-            Mechatronics Engineer specialized in Industrial Instrumentation &amp; Control, with hands-on experience in field instrumentation, loop checks, calibration, control loop verification, interlock validation and PLC/DCS troubleshooting in industrial environments. Strong orientation toward reliable plant operation, process control and technical support during startups, shutdowns and maintenance activities.
-          </p>
+        <div class="hero-right">
+          <section class="card hero-main">
+            <p class="eyebrow" data-i18n="heroEyebrow">Instrumentation, control systems and industrial operations support</p>
+            <h2 class="headline" data-i18n="heroHeadline">Instrumentation and control for industrial operations.</h2>
+            <p class="summary" data-i18n="heroSummary">
+              Mechatronics Engineer specialized in Industrial Instrumentation &amp; Control, with hands-on experience in field instrumentation, loop checks, calibration, control loop verification, interlock validation and PLC/DCS troubleshooting in industrial environments.
+            </p>
 
-          <div class="metrics-grid" aria-label="Key strengths">
-            <article class="metric">
-              <strong data-i18n="metric1Title">Field Work</strong>
-              <p data-i18n="metric1Text">Loop checks, calibration and functional testing of instruments and control loops.</p>
-            </article>
-            <article class="metric">
-              <strong data-i18n="metric2Title">Control Systems</strong>
-              <p data-i18n="metric2Text">Exposure to Honeywell Experion PKS, ABB 800xA, AVEVA System Platform and PLC platforms.</p>
-            </article>
-            <article class="metric">
-              <strong data-i18n="metric3Title">Plant Support</strong>
-              <p data-i18n="metric3Text">Support during troubleshooting, safe startup and shutdown readiness verification.</p>
-            </article>
-          </div>
-        </section>
+            <div class="metrics-grid">
+              <article class="metric">
+                <strong data-i18n="metric1Title">Field Work</strong>
+                <p data-i18n="metric1Text">Loop checks, calibration and functional testing of instruments and control loops.</p>
+              </article>
+              <article class="metric">
+                <strong data-i18n="metric2Title">Control Systems</strong>
+                <p data-i18n="metric2Text">Exposure to Honeywell Experion PKS, ABB 800xA, AVEVA System Platform and PLC platforms.</p>
+              </article>
+              <article class="metric">
+                <strong data-i18n="metric3Title">Plant Support</strong>
+                <p data-i18n="metric3Text">Support during troubleshooting, safe startup and shutdown readiness verification.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="card section compact-section" id="highlights">
+            <div class="section-title">
+              <div>
+                <h2 data-i18n="highlightsTitle">Technical Highlights</h2>
+                <p class="section-subtitle" data-i18n="highlightsSubtitle">Core strengths, systems and software used in industrial environments</p>
+              </div>
+            </div>
+
+            <div class="highlights-grid">
+              <article class="highlight-card">
+                <h3 data-i18n="highlightCol1Title">Core Strengths</h3>
+                <ul class="highlight-list">
+                  <li data-i18n="highlight1">Field instrumentation and loop checks</li>
+                  <li data-i18n="highlight2">Calibration and functional testing</li>
+                  <li data-i18n="highlight3">Control loop verification</li>
+                  <li data-i18n="highlight4">Interlock validation</li>
+                  <li data-i18n="highlight5">PLC/DCS troubleshooting</li>
+                  <li data-i18n="highlight6">Startup and shutdown support</li>
+                </ul>
+              </article>
+              <article class="highlight-card">
+                <h3 data-i18n="highlightCol2Title">Control Systems</h3>
+                <ul class="highlight-list">
+                  <li>Honeywell Experion PKS</li>
+                  <li>ABB 800xA</li>
+                  <li>AVEVA System Platform</li>
+                  <li>Siemens TIA Portal</li>
+                  <li>Allen-Bradley Studio 5000</li>
+                  <li>Schneider ControlExpert</li>
+                </ul>
+              </article>
+              <article class="highlight-card">
+                <h3 data-i18n="highlightCol3Title">Engineering Software</h3>
+                <ul class="highlight-list">
+                  <li>AVEVA PI System</li>
+                  <li>Excel (VBA)</li>
+                  <li>Power BI</li>
+                  <li>Python</li>
+                  <li>AutoCAD</li>
+                  <li>MS Project</li>
+                </ul>
+              </article>
+              <article class="highlight-card">
+                <h3 data-i18n="highlightCol4Title">Communications</h3>
+                <ul class="highlight-list">
+                  <li>Modbus TCP/IP</li>
+                  <li>EtherNet/IP</li>
+                  <li>HART</li>
+                  <li>Profibus DP</li>
+                  <li>FOUNDATION Fieldbus</li>
+                </ul>
+              </article>
+              <article class="highlight-card">
+                <h3 data-i18n="highlightCol5Title">Engineering Documentation</h3>
+                <ul class="highlight-list">
+                  <li data-i18n="highlightDoc1">P&amp;ID review</li>
+                  <li data-i18n="highlightDoc2">Loop diagrams</li>
+                  <li data-i18n="highlightDoc3">I/O lists</li>
+                  <li data-i18n="highlightDoc4">Instrument datasheets</li>
+                  <li data-i18n="highlightDoc5">Technical reports</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+        </div>
       </section>
 
       <div class="content-grid">
@@ -161,21 +217,6 @@
                   <li data-i18n="exp2Bullet5">Supported PID loop review, alarm management initiatives and basic industrial communications such as Modbus and EtherNet/IP.</li>
                 </ul>
               </article>
-
-              <article class="timeline-item">
-                <div class="item-head">
-                  <div>
-                    <h3 data-i18n="exp3Role">R&amp;D Intern – Automation &amp; Control Systems</h3>
-                    <p class="item-sub" data-i18n="exp3Company">National University of Engineering – Research Department · Lima, Peru</p>
-                  </div>
-                  <span class="period" data-i18n="exp3Period">Mar 2024 – Dec 2024</span>
-                </div>
-                <ul class="clean-list">
-                  <li data-i18n="exp3Bullet1">Developed control and monitoring solutions for automated systems in research and development environments.</li>
-                  <li data-i18n="exp3Bullet2">Applied data analysis and modeling techniques for process and signal behavior.</li>
-                  <li data-i18n="exp3Bullet3">Programmed in Python for control applications and basic predictive modeling tasks.</li>
-                </ul>
-              </article>
             </div>
           </section>
 
@@ -196,15 +237,6 @@
                   <p><strong data-i18n="projectRoleLabel">Contribution:</strong> <span data-i18n="project1Role">Supported implementation focused on anomaly detection and performance analysis of compressors, turbines and pumps.</span></p>
                 </div>
               </article>
-
-              <article class="project">
-                <h3 data-i18n="project2Title">Mineral Processing Pilot Plant Automation</h3>
-                <div class="project-lines">
-                  <p><strong data-i18n="projectScopeLabel">Scope:</strong> <span data-i18n="project2Scope">Automation and process supervision in a pilot plant environment.</span></p>
-                  <p><strong data-i18n="projectSystemsLabel">Systems:</strong> <span data-i18n="project2Systems">DCS configuration, industrial communications and engineering documentation review.</span></p>
-                  <p><strong data-i18n="projectRoleLabel">Contribution:</strong> <span data-i18n="project2Role">Supported process monitoring setup and interpretation of P&amp;IDs and control architecture for operational validation.</span></p>
-                </div>
-              </article>
             </div>
           </section>
         </div>
@@ -217,7 +249,6 @@
                 <p class="section-subtitle" data-i18n="educationSubtitle">Academic background and specialization</p>
               </div>
             </div>
-
             <div class="mini-grid">
               <article class="mini-card">
                 <h3 data-i18n="edu1Title">B.Sc. in Mechatronics Engineering</h3>
@@ -231,30 +262,6 @@
             </div>
           </section>
 
-          <section class="card section" id="competencies">
-            <div class="section-title">
-              <div>
-                <h2 data-i18n="competenciesTitle">Core Competencies</h2>
-                <p class="section-subtitle" data-i18n="competenciesSubtitle">Field and control-oriented profile</p>
-              </div>
-            </div>
-
-            <div class="chip-grid">
-              <span class="chip" data-i18n="comp1">Field Instrumentation</span>
-              <span class="chip" data-i18n="comp2">Loop Checks</span>
-              <span class="chip" data-i18n="comp3">Calibration</span>
-              <span class="chip" data-i18n="comp4">Control Loops</span>
-              <span class="chip" data-i18n="comp5">PLC Troubleshooting</span>
-              <span class="chip" data-i18n="comp6">DCS Troubleshooting</span>
-              <span class="chip" data-i18n="comp7">Interlocks</span>
-              <span class="chip" data-i18n="comp8">Alarm Management</span>
-              <span class="chip" data-i18n="comp9">P&amp;ID Review</span>
-              <span class="chip" data-i18n="comp10">I/O Signal Review</span>
-              <span class="chip" data-i18n="comp11">Startup / Shutdown Support</span>
-              <span class="chip" data-i18n="comp12">Preventive and Corrective Maintenance</span>
-            </div>
-          </section>
-
           <section class="card section" id="skills">
             <div class="section-title">
               <div>
@@ -262,7 +269,6 @@
                 <p class="section-subtitle" data-i18n="skillsSubtitle">Platforms, tools and industrial technologies</p>
               </div>
             </div>
-
             <div class="mini-grid">
               <article class="mini-card">
                 <h3 data-i18n="skillsCat1">Field Instrumentation</h3>
@@ -280,14 +286,6 @@
                 <h3 data-i18n="skillsCat4">Data and Analytics</h3>
                 <p data-i18n="skillsCat4Body">PI System, Power BI, Excel (VBA), Python and reporting for operational monitoring.</p>
               </article>
-              <article class="mini-card">
-                <h3 data-i18n="skillsCat5">Enterprise and Planning Tools</h3>
-                <p data-i18n="skillsCat5Body">SAP (PM/MM), MS Project and Primavera P6.</p>
-              </article>
-              <article class="mini-card">
-                <h3 data-i18n="skillsCat6">Engineering Software and Certifications</h3>
-                <p data-i18n="skillsCat6Body">AutoCAD, AutoCAD Plant 3D, SolidWorks, Inventor, Navisworks, Schneider Electric Specialist, Cisco CCNA v7, Health &amp; Safety Supervisor.</p>
-              </article>
             </div>
           </section>
 
@@ -298,7 +296,6 @@
                 <p class="section-subtitle" data-i18n="languagesSubtitle">Complementary profile information</p>
               </div>
             </div>
-
             <div class="mini-grid">
               <article class="mini-card">
                 <h3 data-i18n="langCardTitle">Languages</h3>
@@ -322,7 +319,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <p>© <span id="year"></span> Eduardo Rojas</p>
-      <button class="top-btn" id="topBtn" type="button" aria-label="Back to top">Top</button>
+      <button class="top-btn" id="topBtn" type="button" data-i18n="topButton">Top</button>
     </div>
   </footer>
 
