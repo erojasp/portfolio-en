@@ -284,43 +284,8 @@ topBtn.addEventListener("click", () => {
 });
 
 const savedLang = localStorage.getItem("cv_lang") || "en";
+const savedTheme = localStorage.getItem("cv_theme") || "light";
+
+applyTheme(savedTheme);
 applyLanguage(savedLang);
 setActiveNav();
-
-
-const themeToggle = document.getElementById("themeToggle");
-const themeIcon = document.getElementById("themeIcon");
-const themeLabel = document.getElementById("themeLabel");
-
-function updateThemeButton(theme, lang) {
-  const isDark = theme === "dark";
-  themeIcon.textContent = isDark ? "☀️" : "🌙";
-  themeLabel.textContent = lang === "es"
-    ? (isDark ? "Claro" : "Oscuro")
-    : (isDark ? "Light" : "Dark");
-}
-
-function applyTheme(theme) {
-  document.body.setAttribute("data-theme", theme);
-  localStorage.setItem("cv_theme", theme);
-  const currentLang = localStorage.getItem("cv_lang") || "en";
-  updateThemeButton(theme, currentLang);
-}
-
-themeToggle.addEventListener("click", () => {
-  const current = document.body.getAttribute("data-theme") || "light";
-  applyTheme(current === "dark" ? "light" : "dark");
-});
-
-const savedTheme = localStorage.getItem("cv_theme") || "light";
-applyTheme(savedTheme);
-
-// Refresh theme button label after language changes
-const originalApplyLanguage = applyLanguage;
-applyLanguage = function(lang) {
-  originalApplyLanguage(lang);
-  const currentTheme = document.body.getAttribute("data-theme") || "light";
-  updateThemeButton(currentTheme, lang);
-};
-
-applyLanguage(savedLang);
