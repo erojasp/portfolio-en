@@ -1,0 +1,86 @@
+:root {
+  --bg: #F8FAFC;
+  --card: #FFFFFF;
+  --text: #0F172A;
+  --muted: #475569;
+  --border: #CBD5E1;
+}
+
+body[data-theme="dark"] {
+  --bg: #0F172A;
+  --card: #1E293B;
+  --text: #E5E7EB;
+  --muted: #CBD5E1;
+  --border: #334155;
+}
+
+/* BASE */
+body {
+  margin: 0;
+  font-family: Arial;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/* HEADER */
+.topbar {
+  border-bottom: 1px solid var(--border);
+  padding: 15px 0;
+}
+
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand span {
+  color: #3B82F6;
+}
+
+/* BOTÓN */
+.theme-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* CARD */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+/* PROJECTS */
+.project-grid {
+  display: grid;
+  gap: 15px;
+}
+
+.project {
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--card); /*CLAVE */
+  border: 1px solid var(--border);
+}
+
+/* FORZAR TEXTO EN DARK */
+.project h3 {
+  color: var(--text);
+}
+
+.project p {
+  color: var(--muted);
+}
